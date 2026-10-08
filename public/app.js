@@ -3,12 +3,18 @@ const revealElements = [...document.querySelectorAll('.reveal')];
 const videos = [...document.querySelectorAll('.demo-video')];
 let revealObserver;
 
+function clearPending() {
+  revealElements.forEach((element) => {
+    element.classList.remove('pending', 'is-animating');
+  });
+}
+
 function configureMotion() {
   revealObserver?.disconnect();
   const reduce = motionPreference.matches;
   document.documentElement.classList.toggle('motion-enabled', !reduce);
   document.documentElement.classList.toggle('reduce-motion', reduce);
-  revealElements.forEach((element) => element.classList.remove('pending'));
+  clearPending();
 
   if (reduce) {
     videos.forEach((video) => {
@@ -26,21 +32,23 @@ function configureMotion() {
     video.play().catch(() => {});
   });
 
+  // Progressive enhancement only: never hide content (no opacity:0).
+  // Mild translate on below-fold cards; content remains readable throughout.
   if (!('IntersectionObserver' in window)) return;
   revealObserver = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.remove('pending');
-          revealObserver.unobserve(entry.target);
-        }
+        if (!entry.isIntersecting) return;
+        entry.target.classList.remove('pending');
+        revealObserver.unobserve(entry.target);
+        window.setTimeout(() => entry.target.classList.remove('is-animating'), 600);
       });
     },
-    { threshold: 0.06 }
+    { threshold: 0.08, rootMargin: '0px 0px -8% 0px' }
   );
   revealElements.forEach((element) => {
-    if (element.getBoundingClientRect().top > window.innerHeight) {
-      element.classList.add('pending');
+    if (element.getBoundingClientRect().top > window.innerHeight * 0.92) {
+      element.classList.add('is-animating', 'pending');
       revealObserver.observe(element);
     }
   });
