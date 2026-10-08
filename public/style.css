@@ -119,12 +119,13 @@ h2{font-size:clamp(36px,4.2vw,55px);font-weight:500;letter-spacing:-2.6px;line-h
   position:sticky;
   top:24px;
   width:100%;
-  aspect-ratio:16/10;
-  max-height:min(560px,calc(100vh - 48px));
-  background:#e0ddd3;
+  height:100%;
+  max-height:calc(100vh - 48px);
+  min-height:280px;
+  background:#e8e4dc;
   z-index:1;
 }
-.demo-video,.demo-poster{display:none;width:100%;height:100%;object-fit:contain;object-position:top center;position:absolute;inset:0;background:#e0ddd3}
+.demo-video,.demo-poster{display:none;width:100%;height:100%;object-fit:contain;object-position:top center;position:absolute;inset:0;background:#e8e4dc}
 .demo-poster{display:block}
 .can-autoplay .demo-video{display:block}
 .can-autoplay .demo-poster{display:none}
@@ -221,7 +222,7 @@ h2{font-size:clamp(36px,4.2vw,55px);font-weight:500;letter-spacing:-2.6px;line-h
   h1{letter-spacing:-3.5px;font-size:60px}
   .app-card{grid-template-columns:1fr}
   .app-media{border-radius:7px 7px 0 0;min-height:0}
-  .demo-media{position:relative;top:auto;aspect-ratio:16/10}
+  .demo-media{position:relative;top:auto;height:auto;max-height:none;aspect-ratio:16/10;min-height:0}
   .app-body{border-radius:0 0 7px 7px}
   .faq-grid{gap:22px}
   .contact-top>span{display:none}
