@@ -1,0 +1,230 @@
+{
+  "site": {
+    "title": "NODAYSIDLE Apps — Download desktop tools",
+    "description": "Download NODAYSIDLE desktop apps: Cascade, Sonora, WhisperBar, and NODAYSIDLE Browser for Linux. macOS Apple Silicon and Linux x86_64 builds from GitHub Releases.",
+    "url": "https://nodaysidle-apps.vercel.app",
+    "portfolio": "https://nodaysidle-portfolio-nine.vercel.app",
+    "github": "https://github.com/nodaysidle",
+    "repo": "https://github.com/nodaysidle/nodaysidle-apps"
+  },
+  "apps": [
+    {
+      "id": "cascade",
+      "name": "Cascade",
+      "slug": "nodaysidle-cascade-v3",
+      "version": "v3.1.0",
+      "released": "2026-09-27",
+      "pitch": "Turn one software idea into five agent-ready markdown contracts.",
+      "description": "One model call for product meaning; a local TypeScript compiler owns IDs, graph, files, and the five locked documents (PRD, ARD, TRD, TASKS, AGENTS) a coding agent can build from.",
+      "features": [
+        "Semantic intake schema — features, data, integrations, constraints",
+        "Five locked presets: macOS SwiftUI desktop & menubar, Tauri 2, Astro, Android Compose",
+        "Exact-five export with SHA-256 equality between preview and export",
+        "Safe provider boundary: memory-only credentials, at most one repair request"
+      ],
+      "platforms": ["macOS Apple Silicon", "Linux x86_64"],
+      "licence": "MIT",
+      "repo": "https://github.com/nodaysidle/nodaysidle-cascade-v3",
+      "release": "https://github.com/nodaysidle/nodaysidle-cascade-v3/releases/tag/v3.1.0",
+      "media": {
+        "poster": "/assets/media/cascade.webp",
+        "mp4": "/assets/media/cascade.mp4",
+        "webm": "/assets/media/cascade.webm",
+        "alt": "Cascade demo: one idea in, five planning documents out"
+      },
+      "notes": {
+        "mac": "Ad-hoc signed, not notarized. First launch: right-click the app → Open. Fallback: System Settings → Privacy & Security → Open Anyway.",
+        "linux": "AppImage: chmod +x before running. tar.gz needs WebKitGTK 4.1 (e.g. webkit2gtk-4.1 on Arch)."
+      },
+      "downloads": [
+        {
+          "label": ".dmg",
+          "platform": "macOS Apple Silicon",
+          "filename": "NODAYSIDLE-Cascade-V3-3.1.0-aarch64.dmg",
+          "url": "https://github.com/nodaysidle/nodaysidle-cascade-v3/releases/download/v3.1.0/NODAYSIDLE-Cascade-V3-3.1.0-aarch64.dmg",
+          "size": 11644077,
+          "sha256": "1aec1ffd45ce4dde171210a3ad1a0b195da0214316b2d1adb27e2657979ed3d9",
+          "macNote": true
+        },
+        {
+          "label": ".AppImage",
+          "platform": "Linux x86_64",
+          "filename": "NODAYSIDLE.Cascade.V3_3.1.0_amd64.AppImage",
+          "url": "https://github.com/nodaysidle/nodaysidle-cascade-v3/releases/download/v3.1.0/NODAYSIDLE.Cascade.V3_3.1.0_amd64.AppImage",
+          "size": 86354424,
+          "sha256": "fe784421f37d6148e1c8f13639ad261cbe930ab6357f8d25528e9c8ed120eac4",
+          "linuxAppImage": true
+        },
+        {
+          "label": ".deb",
+          "platform": "Linux x86_64",
+          "filename": "NODAYSIDLE.Cascade.V3_3.1.0_amd64.deb",
+          "url": "https://github.com/nodaysidle/nodaysidle-cascade-v3/releases/download/v3.1.0/NODAYSIDLE.Cascade.V3_3.1.0_amd64.deb",
+          "size": 8603022,
+          "sha256": "5dddd77aef0f4c5156cd1987547ebda5f3e06f795ba11d6809a87c08dedb297e"
+        },
+        {
+          "label": ".tar.gz",
+          "platform": "Linux x86_64",
+          "filename": "NODAYSIDLE-Cascade-V3-3.1.0-linux-x86_64.tar.gz",
+          "url": "https://github.com/nodaysidle/nodaysidle-cascade-v3/releases/download/v3.1.0/NODAYSIDLE-Cascade-V3-3.1.0-linux-x86_64.tar.gz",
+          "size": 6917341,
+          "sha256": "f3e7693d2d9ed9657fca75f4168295c4283ca280a0636537ce606990419b83b3"
+        }
+      ]
+    },
+    {
+      "id": "sonora",
+      "name": "Sonora",
+      "slug": "nodaysidle-sonora",
+      "version": "v0.1.1",
+      "released": "2026-09-16",
+      "pitch": "Universal native desktop music player for Spotify, YouTube Music, and local files.",
+      "description": "Sample-accurate gapless audio, EBU R128 loudness normalization, and synced lyrics with real-time romanization — built with Tauri 2 and Rust, with no application telemetry.",
+      "features": [
+        "Unified queue for local files, Spotify, and YouTube Music",
+        "Sample-accurate gapless transitions via double-buffering pre-roll",
+        "Studio-grade EBU R128 loudness normalization (−14 LUFS)",
+        "Synced lyrics with Kanji/Hangul/Pinyin/Cyrillic romanization"
+      ],
+      "platforms": ["macOS Apple Silicon", "Linux x86_64"],
+      "licence": "MIT",
+      "repo": "https://github.com/nodaysidle/nodaysidle-sonora",
+      "release": "https://github.com/nodaysidle/nodaysidle-sonora/releases/tag/v0.1.1",
+      "media": {
+        "poster": "/assets/media/sonora.webp",
+        "mp4": "/assets/media/sonora.mp4",
+        "webm": "/assets/media/sonora.webm",
+        "alt": "Sonora demo: Spotify, YouTube Music and local files in one player"
+      },
+      "notes": {
+        "mac": "Ad-hoc signed, not notarized. First launch: right-click the app → Open. Fallback: System Settings → Privacy & Security → Open Anyway.",
+        "linux": "AppImage: chmod +x before running."
+      },
+      "downloads": [
+        {
+          "label": ".dmg",
+          "platform": "macOS Apple Silicon",
+          "filename": "Sonora_0.1.1_aarch64.dmg",
+          "url": "https://github.com/nodaysidle/nodaysidle-sonora/releases/download/v0.1.1/Sonora_0.1.1_aarch64.dmg",
+          "size": 16952813,
+          "sha256": "85bb22139854ac444524fee4c76769c755cf86f01f991de43dd1d0cdcd559727",
+          "macNote": true
+        },
+        {
+          "label": ".app.tar.gz",
+          "platform": "macOS Apple Silicon",
+          "filename": "Sonora_aarch64.app.tar.gz",
+          "url": "https://github.com/nodaysidle/nodaysidle-sonora/releases/download/v0.1.1/Sonora_aarch64.app.tar.gz",
+          "size": 16472041,
+          "sha256": "fe18857a35bd87a9951ed83fdd4c6eae031e7114a95067990f42263634947b9d",
+          "macNote": true
+        },
+        {
+          "label": ".AppImage",
+          "platform": "Linux x86_64",
+          "filename": "Sonora_0.1.1_amd64.AppImage",
+          "url": "https://github.com/nodaysidle/nodaysidle-sonora/releases/download/v0.1.1/Sonora_0.1.1_amd64.AppImage",
+          "size": 95066616,
+          "sha256": "16e9bdc29e9f6a6f9eef3a247f659ab7b41fc7eab85893b63324ca02be87346c",
+          "linuxAppImage": true
+        },
+        {
+          "label": ".deb",
+          "platform": "Linux x86_64",
+          "filename": "Sonora_0.1.1_amd64.deb",
+          "url": "https://github.com/nodaysidle/nodaysidle-sonora/releases/download/v0.1.1/Sonora_0.1.1_amd64.deb",
+          "size": 17848338,
+          "sha256": "2f8ca891093d216ec0737bc70b5898c0eef5b80d295807843088ad81fbae2ecb"
+        },
+        {
+          "label": ".rpm",
+          "platform": "Linux x86_64",
+          "filename": "Sonora-0.1.1-1.x86_64.rpm",
+          "url": "https://github.com/nodaysidle/nodaysidle-sonora/releases/download/v0.1.1/Sonora-0.1.1-1.x86_64.rpm",
+          "size": 17846787,
+          "sha256": "6defc8d52d00a181774ef4003d99acbf715e18d7a97d2d32555508f8c63c88b6"
+        }
+      ]
+    },
+    {
+      "id": "whisperbar",
+      "name": "WhisperBar",
+      "slug": "whisper-bar",
+      "version": "v1.1.2",
+      "released": "2026-09-21",
+      "pitch": "Native, privacy-first macOS menu bar dictation with real-time streaming.",
+      "description": "100% native Swift 6 menu bar utility: live transcription HUD, smart LLM refinement when speech needs it, Keychain-only credentials, and zero third-party dependencies. Prebuilt release is Apple Silicon only (macOS 14+).",
+      "features": [
+        "Deepgram Nova live WebSocket streaming with interim HUD preview",
+        "Push-to-talk and hands-free toggle modes with system-wide hotkeys",
+        "API keys stored only in the macOS Keychain",
+        "Local SQLite transcript history with FTS5 search"
+      ],
+      "platforms": ["macOS Apple Silicon"],
+      "licence": "MIT",
+      "repo": "https://github.com/nodaysidle/whisper-bar",
+      "release": "https://github.com/nodaysidle/whisper-bar/releases/tag/v1.1.2",
+      "media": {
+        "poster": "/assets/media/whisperbar.webp",
+        "mp4": "/assets/media/whisperbar.mp4",
+        "webm": "/assets/media/whisperbar.webm",
+        "alt": "WhisperBar demo: talk faster than you type"
+      },
+      "notes": {
+        "mac": "Ad-hoc signed, not notarized. First launch: right-click the app → Open. Fallback: System Settings → Privacy & Security → Open Anyway. Requires your own Deepgram / OpenRouter API keys."
+      },
+      "downloads": [
+        {
+          "label": ".dmg",
+          "platform": "macOS Apple Silicon",
+          "filename": "WhisperBar.dmg",
+          "url": "https://github.com/nodaysidle/whisper-bar/releases/download/v1.1.2/WhisperBar.dmg",
+          "size": 3305398,
+          "sha256": "7db0c6d57afac590615b02545ac3198e72754e10eeff587172158adb018b84da",
+          "macNote": true,
+          "shaSource": "README + GitHub asset digest"
+        }
+      ]
+    },
+    {
+      "id": "browser-linux",
+      "name": "NODAYSIDLE Browser for Linux",
+      "slug": "nodaysidle-browser-linux",
+      "version": "v0.1.0",
+      "released": "2026-10-07",
+      "pitch": "A quiet, native Linux browser for focused browsing.",
+      "description": "Minimal chrome and native WebKit pages — Rust + GTK 3 + WebKitGTK 4.1, no Electron runtime, no application telemetry. Linux x86_64 AppImage only; system GTK 3 and WebKitGTK 4.1 required.",
+      "features": [
+        "Native GTK 3 chrome backed by WebKitGTK 4.1",
+        "Multi-tab browsing, in-page find, downloads",
+        "Local-first history and cookies (0600 permissions)",
+        "Wayland app_id / X11 WM_CLASS: com.nodaysidle.Browser"
+      ],
+      "platforms": ["Linux x86_64"],
+      "licence": "No licence specified",
+      "repo": "https://github.com/nodaysidle/nodaysidle-browser-linux",
+      "release": "https://github.com/nodaysidle/nodaysidle-browser-linux/releases/tag/v0.1.0",
+      "media": {
+        "poster": "/assets/media/browser-linux.webp",
+        "mp4": "/assets/media/browser-linux.mp4",
+        "webm": "/assets/media/browser-linux.webm",
+        "alt": "NODAYSIDLE Browser for Linux demo"
+      },
+      "notes": {
+        "linux": "chmod +x the AppImage. Requires system GTK 3 + WebKitGTK 4.1 (e.g. gtk3 and webkit2gtk-4.1 on Arch)."
+      },
+      "downloads": [
+        {
+          "label": ".AppImage",
+          "platform": "Linux x86_64",
+          "filename": "nodaysidle-browser-x86_64.AppImage",
+          "url": "https://github.com/nodaysidle/nodaysidle-browser-linux/releases/download/v0.1.0/nodaysidle-browser-x86_64.AppImage",
+          "size": 1522168,
+          "sha256": "f6d82efa6d7c972ff25f269f98457f0d5c99263a45c80162cfc9a085b20c4404",
+          "linuxAppImage": true
+        }
+      ]
+    }
+  ]
+}

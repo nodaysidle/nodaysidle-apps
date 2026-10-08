@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{TITLE}}</title>
+<meta name="description" content="{{DESCRIPTION}}">
+<meta name="theme-color" content="#f6f5f0">
+<meta name="author" content="NODAYSIDLE">
+<link rel="canonical" href="{{SITE_URL}}/">
+<meta property="og:title" content="{{TITLE}}">
+<meta property="og:description" content="{{DESCRIPTION}}">
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{SITE_URL}}/">
+<meta property="og:image" content="{{OG_IMAGE}}">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{TITLE}}">
+<meta name="twitter:description" content="{{DESCRIPTION}}">
+<meta name="twitter:image" content="{{OG_IMAGE}}">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/style.css">
+<script src="/app.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="header wrap">
+  <a class="wordmark" href="#home" aria-label="NODAYSIDLE Apps home">
+    <span class="brand-icon" aria-hidden="true">n<span>↗</span></span>nodaysidle<span class="brand-dot">.</span>
+  </a>
+  <nav aria-label="Main navigation">
+    <a href="#apps">Apps <span>{{APP_COUNT}}</span></a>
+    <a href="#faq">FAQ</a>
+    <a href="{{PORTFOLIO}}" class="nav-contact">Portfolio <span aria-hidden="true">↗</span></a>
+  </nav>
+</header>
+<main id="main">
+  <section id="home" class="hero wrap" aria-labelledby="hero-heading">
+    <div class="hero-top">
+      <p class="eyebrow"><span class="signal"></span> DESKTOP APPS · DOWNLOAD</p>
+      <p class="location">GITHUB RELEASES <span>/</span> OPEN SOURCE</p>
+    </div>
+    <div class="hero-layout">
+      <div class="hero-copy">
+        <p class="brand-mark">NODAYSIDLE</p>
+        <h1 id="hero-heading">Apps you can<br>actually <em>install.</em></h1>
+        <p class="hero-description">macOS Apple Silicon and Linux x86_64 builds — Cascade, Sonora, WhisperBar, and a quiet native Linux browser. Straight from GitHub Releases.</p>
+        <div class="hero-actions">
+          <a href="#apps" class="button primary">Browse downloads <span aria-hidden="true">↘</span></a>
+          <a href="{{GITHUB}}" class="text-link">GitHub <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="hero-frame">
+          <img src="/assets/media/cascade.webp" alt="" width="960" height="540" decoding="async">
+          <div class="hero-frame-meta"><span>FIG. 001 — CASCADE</span><span>DEMO STILL</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-footer">
+      <span><span class="signal"></span> No Windows or Intel Mac builds in this set.</span>
+      <span>SCROLL TO DOWNLOADS <span aria-hidden="true">↓</span></span>
+    </div>
+  </section>
+
+  <div class="discipline-strip">
+    <div class="wrap">
+      <span>MACOS APPLE SILICON</span>
+      <span aria-hidden="true">✳</span>
+      <span>LINUX X86_64</span>
+      <span aria-hidden="true">✳</span>
+      <span>DIRECT GITHUB ASSETS</span>
+      <span aria-hidden="true">✳</span>
+      <span>NO DAYS IDLE</span>
+    </div>
+  </div>
+
+  <section id="apps" class="section wrap" aria-labelledby="apps-heading">
+    <div class="section-heading reveal">
+      <div>
+        <p class="eyebrow">01 / THE APPS</p>
+        <h2 id="apps-heading">Four tools.<br><em>Verified builds.</em></h2>
+      </div>
+      <p>One card per release.<br>Checksums where the release provides them.</p>
+    </div>
+    <nav class="app-jump" aria-label="Jump to app">{{NAV_APPS}}</nav>
+    <div class="app-stack">{{APPS}}</div>
+  </section>
+
+  <section id="faq" class="faq-section" aria-labelledby="faq-heading">
+    <div class="wrap">
+      <div class="section-heading reveal">
+        <div>
+          <p class="eyebrow">02 / BEFORE YOU INSTALL</p>
+          <h2 id="faq-heading">Plain facts.<br><em>No surprises.</em></h2>
+        </div>
+      </div>
+      <div class="faq-grid">
+        <article class="reveal">
+          <h3>Which platforms?</h3>
+          <p>These releases ship for <strong>macOS Apple Silicon</strong> and/or <strong>Linux x86_64</strong> only. There are no Windows builds and no Intel Mac builds in this set. WhisperBar is Apple Silicon only; the browser is Linux only.</p>
+        </article>
+        <article class="reveal">
+          <h3>macOS Gatekeeper</h3>
+          <p>macOS apps are <strong>ad-hoc signed, not notarized</strong>. On first launch, right-click the app and choose <strong>Open</strong>. If needed, use <strong>System Settings → Privacy &amp; Security → Open Anyway</strong>.</p>
+        </article>
+        <article class="reveal">
+          <h3>Linux AppImages</h3>
+          <p>Run <code>chmod +x</code> on the AppImage before launching. NODAYSIDLE Browser also needs system <strong>GTK 3</strong> and <strong>WebKitGTK 4.1</strong>.</p>
+        </article>
+        <article class="reveal">
+          <h3>Checksums</h3>
+          <p>SHA-256 values come from the GitHub release notes, README, or asset digest. Never invent a hash. Verify with <code>shasum -a 256</code> or <code>sha256sum</code>.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-section" aria-labelledby="more-heading">
+    <div class="wrap">
+      <div class="contact-top">
+        <p class="eyebrow">03 / ELSEWHERE</p>
+        <span>PORTFOLIO · SOURCE · THIS SITE</span>
+      </div>
+      <div class="contact-layout">
+        <h2 id="more-heading">More from<br>the <em>atelier.</em></h2>
+        <div>
+          <p>Selected work, writing, and the rest of the NODAYSIDLE toolkit live on the portfolio. Source for every app is on GitHub.</p>
+          <a class="contact-email" href="{{PORTFOLIO}}">Portfolio <span aria-hidden="true">↗</span></a>
+          <a class="text-link" href="{{GITHUB}}">github.com/nodaysidle <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="footer wrap">
+  <a href="#home" class="wordmark">nodaysidle<span class="brand-dot">.</span></a>
+  <p>© {{YEAR}} NODAYSIDLE · Downloads from GitHub Releases · No trackers.</p>
+  <a href="{{REPO}}" class="text-link">Site source <span aria-hidden="true">↗</span></a>
+</footer>
+</body>
+</html>
