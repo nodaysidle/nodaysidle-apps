@@ -1,0 +1,8 @@
+dist/
+node_modules/
+.vercel/
+.env*
+!.env.example
+artifacts/
+.playwright-mcp/
+.DS_Store
