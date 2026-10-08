@@ -81,7 +81,7 @@ function mediaBlock(media) {
 <source src="${escapeHTML(media.webm)}" type="video/webm">
 <source src="${escapeHTML(media.mp4)}" type="video/mp4">
 </video>
-<img class="demo-poster" src="${escapeHTML(media.poster)}" alt="${escapeHTML(media.alt)}" width="960" height="540" loading="lazy" decoding="async">
+<img class="demo-poster" src="${escapeHTML(media.poster)}" alt="${escapeHTML(media.alt)}" width="960" height="540" loading="eager" decoding="async" fetchpriority="low">
 </div>`;
 }
 
