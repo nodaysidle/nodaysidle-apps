@@ -1,7 +1,7 @@
 {
   "site": {
-    "title": "NODAYSIDLE Apps — Download desktop tools",
-    "description": "Download NODAYSIDLE desktop apps: Cascade, Sonora, WhisperBar, and NODAYSIDLE Browser for Linux. macOS Apple Silicon and Linux x86_64 builds from GitHub Releases.",
+    "title": "NODAYSIDLE Apps — Desktop tools & a Chrome extension",
+    "description": "Download NODAYSIDLE desktop apps and a Chrome extension: Cascade, Sonora, WhisperBar, NODAYSIDLE Browser for Linux, and nodaysrammar. macOS Apple Silicon and Linux x86_64 builds, plus a Chromium MV3 extension, from GitHub Releases.",
     "url": "https://nodaysidle-apps.vercel.app",
     "portfolio": "https://nodaysidle-portfolio-nine.vercel.app",
     "github": "https://github.com/nodaysidle",
@@ -223,6 +223,44 @@
           "size": 1522168,
           "sha256": "f6d82efa6d7c972ff25f269f98457f0d5c99263a45c80162cfc9a085b20c4404",
           "linuxAppImage": true
+        }
+      ]
+    },
+    {
+      "id": "nodaysrammar",
+      "name": "nodaysrammar",
+      "slug": "nodaysrammar",
+      "version": "v1.0.1",
+      "released": "2026-10-09",
+      "pitch": "Private, on-device grammar and spell checker for English, Italian, and Slovenian.",
+      "description": "Works offline with no telemetry; settings sync via Chrome Sync. Engine: ~35k-word dictionaries, grammar rules, and a small JS classifier. Sideload from the release zip — not on the Chrome Web Store.",
+      "features": [
+        "Inline underline with suggestion card",
+        "Fix All for the current field",
+        "Per-site blocklist",
+        "EN / IT / SL with in-page language switch"
+      ],
+      "platforms": ["Chrome / Chromium (MV3)"],
+      "licence": "MIT",
+      "repo": "https://github.com/nodaysidle/nodaysrammar",
+      "release": "https://github.com/nodaysidle/nodaysrammar/releases/tag/v1.0.1",
+      "media": {
+        "poster": "/assets/media/nodaysrammar.webp",
+        "mp4": "/assets/media/nodaysrammar.mp4",
+        "webm": "/assets/media/nodaysrammar.webm",
+        "alt": "nodaysrammar demo: on-device grammar and spell checking in the browser"
+      },
+      "notes": {
+        "chrome": "Unzip, open chrome://extensions, enable Developer mode, Load unpacked, pick the unzipped folder. Works in Chrome, Brave, and Edge."
+      },
+      "downloads": [
+        {
+          "label": ".zip",
+          "platform": "Chrome / Chromium (MV3)",
+          "filename": "NODAYSIDLE-nodaysrammar-1.0.1-chrome.zip",
+          "url": "https://github.com/nodaysidle/nodaysrammar/releases/download/v1.0.1/NODAYSIDLE-nodaysrammar-1.0.1-chrome.zip",
+          "size": 740320,
+          "sha256": "31d86ad88491798dbc7a891793cf4824681244e734ab4fb4935db9567a5a6e6d"
         }
       ]
     }

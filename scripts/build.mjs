@@ -67,6 +67,9 @@ function notesBlock(app) {
   if (app.notes?.linux) {
     parts.push(`<p><strong>Linux:</strong> ${escapeHTML(app.notes.linux)}</p>`);
   }
+  if (app.notes?.chrome) {
+    parts.push(`<p><strong>Chrome:</strong> ${escapeHTML(app.notes.chrome)}</p>`);
+  }
   if (!parts.length) return '';
   return `<aside class="app-notes" aria-label="Install notes">${parts.join('')}</aside>`;
 }
