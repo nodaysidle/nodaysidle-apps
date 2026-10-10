@@ -1,7 +1,7 @@
 {
   "site": {
-    "title": "NODAYSIDLE Apps — Desktop tools & a Chrome extension",
-    "description": "Download NODAYSIDLE desktop apps and a Chrome extension: Cascade, Sonora, WhisperBar, NODAYSIDLE Browser for Linux, and nodaysrammar. macOS Apple Silicon and Linux x86_64 builds, plus a Chromium MV3 extension, from GitHub Releases.",
+    "title": "NODAYSIDLE Apps — Desktop tools, a Chrome extension & Kurek",
+    "description": "Download NODAYSIDLE desktop apps, a Chrome extension, and Kurek: Cascade, Sonora, WhisperBar, NODAYSIDLE Browser for Linux, nodaysrammar, and Kurek. macOS Apple Silicon and Linux x86_64 builds, plus a Chromium MV3 extension, from GitHub Releases.",
     "url": "https://nodaysidle-apps.vercel.app",
     "portfolio": "https://nodaysidle-portfolio-nine.vercel.app",
     "github": "https://github.com/nodaysidle",
@@ -261,6 +261,45 @@
           "url": "https://github.com/nodaysidle/nodaysrammar/releases/download/v1.0.1/NODAYSIDLE-nodaysrammar-1.0.1-chrome.zip",
           "size": 740320,
           "sha256": "31d86ad88491798dbc7a891793cf4824681244e734ab4fb4935db9567a5a6e6d"
+        }
+      ]
+    },
+    {
+      "id": "kurek",
+      "name": "Kurek",
+      "slug": "kureksistant",
+      "version": "v0.2.0",
+      "released": "2026-10-10",
+      "pitch": "A voice assistant daemon for Arch and Hyprland.",
+      "description": "Middle-click to summon, say what you need, and it acts and answers out loud. Requires your own DeepSeek and xAI API keys. Derived from FatihMakes' JARVIS under CC BY-NC 4.0 (non-commercial).",
+      "features": [
+        "24 tools with a C trigger over a Unix socket (~0.8ms median in a mock-daemon bench)",
+        "Local faster-whisper speech-to-text and streaming voice replies",
+        "Screen vision and a systemd user service",
+        "~450MB peak RAM with Whisper loaded"
+      ],
+      "platforms": ["Linux x86_64 (Arch / Hyprland)"],
+      "licence": "CC BY-NC 4.0",
+      "repo": "https://github.com/nodaysidle/kureksistant",
+      "release": "https://github.com/nodaysidle/kureksistant/releases/tag/v0.2.0",
+      "sums": "https://github.com/nodaysidle/kureksistant/releases/download/v0.2.0/SHA256SUMS.txt",
+      "media": {
+        "poster": "/assets/media/kurek.webp",
+        "mp4": "/assets/media/kurek.mp4",
+        "webm": "/assets/media/kurek.webm",
+        "alt": "Kurek demo: voice assistant for Arch Linux and Hyprland"
+      },
+      "notes": {
+        "linux": "Extract the tarball, run ./install_linux.sh (it prints any pacman packages you need), then bind ~/.local/bin/kurek-trigger toggle in Hyprland. Requires your own DeepSeek and xAI API keys."
+      },
+      "downloads": [
+        {
+          "label": ".tar.gz",
+          "platform": "Linux x86_64 (Arch / Hyprland)",
+          "filename": "kureksistant-v0.2.0-linux-x86_64.tar.gz",
+          "url": "https://github.com/nodaysidle/kureksistant/releases/download/v0.2.0/kureksistant-v0.2.0-linux-x86_64.tar.gz",
+          "size": 942506,
+          "sha256": "6b85603070959836f1fecd51bd3b2450d8bc9cbefb6ed0af240f1847e6e619da"
         }
       ]
     }
