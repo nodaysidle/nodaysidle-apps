@@ -88,6 +88,19 @@ function mediaBlock(media) {
 </div>`;
 }
 
+function appLinks(app) {
+  const links = [
+    `<a class="text-link" href="${safeURL(app.repo)}">Repository <span aria-hidden="true">↗</span></a>`,
+    `<a class="text-link" href="${safeURL(app.release)}">Release notes <span aria-hidden="true">↗</span></a>`,
+  ];
+  if (app.sums) {
+    links.push(
+      `<a class="text-link" href="${safeURL(app.sums)}">SHA256SUMS <span aria-hidden="true">↗</span></a>`
+    );
+  }
+  return `<div class="app-links">${links.join('\n')}</div>`;
+}
+
 export function renderAppCard(app, index, total) {
   const num = String(index + 1).padStart(2, '0');
   const totalStr = String(total).padStart(2, '0');
@@ -103,10 +116,7 @@ ${featuresList(app.features)}
 <div class="downloads" role="group" aria-label="Downloads for ${escapeHTML(app.name)}">${downloadButtons(app.downloads)}</div>
 ${checksumRows(app.downloads)}
 ${notesBlock(app)}
-<div class="app-links">
-<a class="text-link" href="${safeURL(app.repo)}">Repository <span aria-hidden="true">↗</span></a>
-<a class="text-link" href="${safeURL(app.release)}">Release notes <span aria-hidden="true">↗</span></a>
-</div>
+${appLinks(app)}
 </div>
 </article>`;
 }

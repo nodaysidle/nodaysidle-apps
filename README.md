@@ -1,12 +1,13 @@
 # nodaysidle-apps
 
-Static showcase and download site for NODAYSIDLE desktop apps and a Chrome extension:
+Static showcase and download site for NODAYSIDLE desktop apps, a Chrome extension, and Kurek:
 
 1. **Cascade** — idea → five agent-ready planning documents  
 2. **Sonora** — native music player (Spotify, YouTube Music, local files)  
 3. **WhisperBar** — macOS menu bar dictation (Apple Silicon)  
 4. **NODAYSIDLE Browser for Linux** — quiet native WebKitGTK browser  
 5. **nodaysrammar** — private on-device grammar & spell checker (Chrome / Chromium MV3)  
+6. **Kurek** — voice assistant daemon for Arch Linux / Hyprland (CC BY-NC 4.0)  
 
 Downloads link straight to GitHub Release assets. Checksums are copied from release notes / READMEs / GitHub asset digests — never invented.
 

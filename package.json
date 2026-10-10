@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "description": "Static showcase and download site for NODAYSIDLE desktop apps and a Chrome extension",
+  "description": "Static showcase and download site for NODAYSIDLE desktop apps, a Chrome extension, and Kurek",
   "scripts": {
     "build": "node scripts/build.mjs",
     "dev": "node scripts/serve.mjs",
