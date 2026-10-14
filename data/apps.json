@@ -273,7 +273,7 @@
       "pitch": "A voice assistant daemon for Arch and Hyprland.",
       "description": "Middle-click to summon, say what you need, and it acts and answers out loud. Requires your own DeepSeek and xAI API keys. Derived from FatihMakes' JARVIS under CC BY-NC 4.0 (non-commercial).",
       "features": [
-        "24 tools with a C trigger over a Unix socket (~0.8ms median in a mock-daemon bench)",
+        "25 tools, summoned by a small C trigger over a Unix socket",
         "Local faster-whisper speech-to-text and streaming voice replies",
         "Screen vision and a systemd user service",
         "~450MB peak RAM with Whisper loaded",
