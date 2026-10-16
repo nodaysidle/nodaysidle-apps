@@ -191,20 +191,22 @@
       "id": "browser-linux",
       "name": "NODAYSIDLE Browser for Linux",
       "slug": "nodaysidle-browser-linux",
-      "version": "v0.1.0",
-      "released": "2026-10-07",
+      "version": "v0.2.0",
+      "released": "2026-10-14",
       "pitch": "A quiet, native Linux browser for focused browsing.",
       "description": "Minimal chrome and native WebKit pages — Rust + GTK 3 + WebKitGTK 4.1, no Electron runtime, no application telemetry. Linux x86_64 AppImage only; system GTK 3 and WebKitGTK 4.1 required.",
       "features": [
         "Native GTK 3 chrome backed by WebKitGTK 4.1",
         "Multi-tab browsing, in-page find, downloads",
+        "Multiple windows sharing one profile (Ctrl+N or --new-window)",
+        "Hyprland corner inset matching decoration:rounding (0 when tiled, maximized, or fullscreen)",
         "Local-first history and cookies (0600 permissions)",
         "Wayland app_id / X11 WM_CLASS: com.nodaysidle.Browser"
       ],
       "platforms": ["Linux x86_64"],
       "licence": "No licence specified",
       "repo": "https://github.com/nodaysidle/nodaysidle-browser-linux",
-      "release": "https://github.com/nodaysidle/nodaysidle-browser-linux/releases/tag/v0.1.0",
+      "release": "https://github.com/nodaysidle/nodaysidle-browser-linux/releases/tag/v0.2.0",
       "media": {
         "poster": "/assets/media/browser-linux.webp",
         "mp4": "/assets/media/browser-linux.mp4",
@@ -219,9 +221,9 @@
           "label": ".AppImage",
           "platform": "Linux x86_64",
           "filename": "nodaysidle-browser-x86_64.AppImage",
-          "url": "https://github.com/nodaysidle/nodaysidle-browser-linux/releases/download/v0.1.0/nodaysidle-browser-x86_64.AppImage",
-          "size": 1522168,
-          "sha256": "f6d82efa6d7c972ff25f269f98457f0d5c99263a45c80162cfc9a085b20c4404",
+          "url": "https://github.com/nodaysidle/nodaysidle-browser-linux/releases/download/v0.2.0/nodaysidle-browser-x86_64.AppImage",
+          "size": 1530360,
+          "sha256": "02d7a85c3d99f5e395425722c57c46d12fabceccd063554b7f01c2b43229ad93",
           "linuxAppImage": true
         }
       ]
