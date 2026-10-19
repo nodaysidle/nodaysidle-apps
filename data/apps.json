@@ -78,12 +78,6 @@
       "licence": "MIT",
       "repo": "https://github.com/nodaysidle/nodaysidle-cascade-v3",
       "release": "https://github.com/nodaysidle/nodaysidle-cascade-v3/releases/tag/v3.1.1",
-      "media": {
-        "poster": "/assets/media/cascade.webp",
-        "mp4": "/assets/media/cascade.mp4",
-        "webm": "/assets/media/cascade.webm",
-        "alt": "Cascade demo: one idea in, five planning documents out"
-      },
       "notes": {
         "mac": "Ad-hoc signed, not notarized. First launch: right-click the app → Open. Fallback: System Settings → Privacy & Security → Open Anyway.",
         "linux": "AppImage: chmod +x before running. tar.gz needs WebKitGTK 4.1 (e.g. webkit2gtk-4.1 on Arch)."
@@ -147,12 +141,6 @@
       "licence": "MIT",
       "repo": "https://github.com/nodaysidle/nodaysidle-sonora",
       "release": "https://github.com/nodaysidle/nodaysidle-sonora/releases/tag/v0.1.2",
-      "media": {
-        "poster": "/assets/media/sonora.webp",
-        "mp4": "/assets/media/sonora.mp4",
-        "webm": "/assets/media/sonora.webm",
-        "alt": "Sonora demo: Spotify, YouTube Music and local files in one player"
-      },
       "notes": {
         "mac": "Ad-hoc signed, not notarized. First launch: right-click the app → Open. Fallback: System Settings → Privacy & Security → Open Anyway.",
         "linux": "AppImage: chmod +x before running."
@@ -222,12 +210,6 @@
       "licence": "MIT",
       "repo": "https://github.com/nodaysidle/whisper-bar",
       "release": "https://github.com/nodaysidle/whisper-bar/releases/tag/v1.1.2",
-      "media": {
-        "poster": "/assets/media/whisperbar.webp",
-        "mp4": "/assets/media/whisperbar.mp4",
-        "webm": "/assets/media/whisperbar.webm",
-        "alt": "WhisperBar demo: talk faster than you type"
-      },
       "notes": {
         "mac": "Ad-hoc signed, not notarized. First launch: right-click the app → Open. Fallback: System Settings → Privacy & Security → Open Anyway. Requires your own Deepgram / OpenRouter API keys."
       },
@@ -269,12 +251,6 @@
       "licence": "No licence specified",
       "repo": "https://github.com/nodaysidle/nodaysidle-browser-linux",
       "release": "https://github.com/nodaysidle/nodaysidle-browser-linux/releases/tag/v0.2.1",
-      "media": {
-        "poster": "/assets/media/browser-linux.webp",
-        "mp4": "/assets/media/browser-linux.mp4",
-        "webm": "/assets/media/browser-linux.webm",
-        "alt": "NODAYSIDLE Browser for Linux demo"
-      },
       "notes": {
         "linux": "chmod +x the AppImage, then run it. GTK 3 and WebKitGTK 4.1 are bundled inside, so nothing else needs installing."
       },
@@ -291,7 +267,8 @@
       "kind": "download",
       "icon": "/assets/icons/browser-linux.webp",
       "githubDescription": "Native Linux WebKitGTK browser in Rust—focused browsing, local-first, no telemetry.",
-      "showFrom": "2026-10-16T17:30:00+02:00"
+      "showFrom": "2026-10-16T17:30:00+02:00",
+      "shortName": "Browser"
     },
     {
       "id": "nodaysrammar",
@@ -313,12 +290,6 @@
       "licence": "MIT",
       "repo": "https://github.com/nodaysidle/nodaysrammar",
       "release": "https://github.com/nodaysidle/nodaysrammar/releases/tag/v1.0.1",
-      "media": {
-        "poster": "/assets/media/nodaysrammar.webp",
-        "mp4": "/assets/media/nodaysrammar.mp4",
-        "webm": "/assets/media/nodaysrammar.webm",
-        "alt": "nodaysrammar demo: on-device grammar and spell checking in the browser"
-      },
       "notes": {
         "chrome": "Unzip, open chrome://extensions, enable Developer mode, Load unpacked, pick the unzipped folder. Works in Chrome, Brave, and Edge."
       },
@@ -359,12 +330,6 @@
       "repo": "https://github.com/nodaysidle/kureksistant",
       "release": "https://github.com/nodaysidle/kureksistant/releases/tag/v0.2.1",
       "sums": "https://github.com/nodaysidle/kureksistant/releases/download/v0.2.1/SHA256SUMS.txt",
-      "media": {
-        "poster": "/assets/media/kurek.webp",
-        "mp4": "/assets/media/kurek.mp4",
-        "webm": "/assets/media/kurek.webm",
-        "alt": "Kurek demo: voice assistant for Arch Linux and Hyprland"
-      },
       "notes": {
         "linux": "Extract the tarball, run ./install_linux.sh (it prints any pacman packages you need), then bind ~/.local/bin/kurek-trigger toggle in Hyprland. Requires your own DeepSeek and xAI API keys."
       },

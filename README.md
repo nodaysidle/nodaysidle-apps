@@ -1,54 +1,42 @@
-# nodaysidle-apps
+# NODAYSIDLE
 
-Static showcase and download site for NODAYSIDLE desktop apps, a Chrome extension, and Kurek:
+The home of every NODAYSIDLE app: **https://nodaysidle-apps.vercel.app**
 
-1. **Cascade** — idea → five agent-ready planning documents  
-2. **Sonora** — native music player (Spotify, YouTube Music, local files)  
-3. **WhisperBar** — macOS menu bar dictation (Apple Silicon)  
-4. **NODAYSIDLE Browser for Linux** — quiet native WebKitGTK browser  
-5. **nodaysrammar** — private on-device grammar & spell checker (Chrome / Chromium MV3)  
-6. **Kurek** — voice assistant daemon for Arch Linux / Hyprland (CC BY-NC 4.0)  
+One page lists the apps, newest first, as greyscale icons that light up on hover. Each app has its own page with the pitch, what it does, the version, a button to the GitHub release page (or "Open the app" for web apps), checksums and a demo.
 
-Downloads link straight to GitHub Release assets. Checksums are copied from release notes / READMEs / GitHub asset digests — never invented.
+Static HTML, CSS and a few lines of JavaScript. No framework, no runtime dependencies, no analytics, no tracking.
 
-Live portfolio (related): [nodaysidle-portfolio-nine.vercel.app](https://nodaysidle-portfolio-nine.vercel.app) · [github.com/nodaysidle](https://github.com/nodaysidle)
-
-## Stack
-
-Plain HTML/CSS/JS. Node 22 build script writes `dist/` from `src/index.html` + `data/apps.json` + `public/`. No framework. Self-hosted Manrope + DM Mono (no Google Fonts CDN).
-
-## Requirements
-
-- Node.js 22+
-
-## Scripts
+## Commands
 
 ```bash
-npm run build     # write dist/
-npm run dev       # rebuild, then serve dist/ at http://127.0.0.1:4173
-npm run preview   # serve existing dist/ (no rebuild)
+npm test          # unit tests (node --test)
+npm run build     # writes dist/
+npm run dev       # build and serve on http://localhost:4173
+npm run check     # claim check, exits 1 on any warning
 ```
 
-## Deploy (Vercel)
+Node 22 or newer.
 
-`vercel.json` sets `buildCommand` to `npm run build` and `outputDirectory` to `dist`. Create a new Vercel project pointed at this repo; no env vars required.
+## Adding or updating an app
 
-## Project layout
+Everything comes from `data/apps.json`. Each app has:
 
-```
-data/apps.json      # release metadata, asset URLs, checksums
-src/index.html      # page template
-scripts/build.mjs   # build → dist/
-scripts/serve.mjs   # local static server
-public/             # CSS, JS, fonts, demo media (copied into dist/)
-```
+- `kind`: `"download"` (GitHub release) or `"web"` (live site, `liveUrl`)
+- `pitch`, `description`, `features`: the text shown on the site. This is checked text, written by hand, never copied from GitHub automatically.
+- `githubDescription`: the repo's GitHub description as last checked
+- `showFrom`: when the app appears on the site, as an ISO date with offset (`2026-10-21T17:30:00+02:00`)
+- `icon`: `/assets/icons/<id>.webp`, trimmed to the same visible size as the others
 
-## Updating a release
+## Launch day
 
-1. Edit `data/apps.json` with the new tag, dates, asset URLs, sizes, and SHA-256 values from the live GitHub release.  
-2. Refresh demo media under `public/assets/media/` if the GIF changed.  
-3. Run `npm run build` and spot-check download links.
+Production builds only include apps whose `showFrom` time has passed. On launch day the site needs a rebuild at the launch time so the new app appears. On arch that runs from a one-off `systemd-run --user` timer that calls the Vercel deploy hook. If it didn't fire, redeploy `main` by hand in Vercel.
 
-## Licence
+Preview deployments (`VERCEL_ENV=preview`) and local builds with `SHOW_ALL=1` include every app, so new pages can be reviewed before launch.
 
-Site code in this repository is MIT unless noted otherwise. Individual apps keep their own licences (see each card).
+## Claim check
+
+`data/flagged-claims.json` lists claims that were found to be unproven (for example Kurek's "sub-second"). The build compares each app's site text and its live GitHub description against that list, and against `githubDescription`. During `npm run build` it only warns, so a launch rebuild is never blocked. `npm run check` fails on the same warnings.
+
+## Fonts and licences
+
+Saira Condensed and IBM Plex Sans and Mono are self-hosted in `public/assets/fonts/` under the SIL Open Font License (licence files alongside). The site's Content Security Policy only allows files from its own origin.

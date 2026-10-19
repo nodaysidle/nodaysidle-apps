@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { renderHome, renderAppPage, numberWord } from '../lib/render.mjs';
+import { renderHome, renderAppPage, renderNotFound, numberWord } from '../lib/render.mjs';
 
 const site = {
   title: 'NODAYSIDLE',
@@ -124,4 +124,29 @@ test('verify section lists sha256 per file', () => {
 
 test('verify section is omitted without checksums', () => {
   assert.doesNotMatch(renderAppPage(site, kurek, 0, [kurek]), /class="verify"/);
+});
+
+test('not found page links home', () => {
+  const html = renderNotFound(site);
+  assert.match(html, /<h1[^>]*>Off track\.<\/h1>/);
+  assert.match(html, /<a href="\/">Back to all apps<\/a>/);
+});
+
+test('home and next link use shortName when set', () => {
+  const browser = { ...kurek, id: 'browser-linux', name: 'NODAYSIDLE Browser for Linux', shortName: 'Browser' };
+  assert.match(renderHome(site, [browser]), /<span class="name">Browser<\/span>/);
+  assert.match(renderAppPage(site, kurek, 0, [kurek, browser]), /<b>Browser<\/b>/);
+  assert.match(renderAppPage(site, browser, 0, [browser]), /<h1>NODAYSIDLE Browser for Linux<\/h1>/);
+});
+
+test('September is abbreviated Sep, not Sept', () => {
+  const wb = { ...kurek, version: 'v1.1.2', released: '2026-09-21' };
+  assert.match(renderHome(site, [wb]), /v1\.1\.2 · 21 Sep</);
+  assert.match(renderAppPage(site, wb, 0, [wb]), /21 Sep 2026/);
+});
+
+test('no demo without media', () => {
+  const bare = { ...kurek, media: undefined };
+  const html = renderAppPage(site, bare, 0, [bare]);
+  assert.doesNotMatch(html, /class="demo"/);
 });
