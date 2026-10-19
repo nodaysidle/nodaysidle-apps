@@ -36,3 +36,11 @@ test('build succeeds when GitHub is unreachable', async () => {
   const { result } = await buildInto({ now: new Date('2026-10-19T12:00:00Z'), showAll: true });
   assert.equal(result.pages.length, 8);
 });
+
+test('production build ships no assets of unlaunched apps', async () => {
+  const { outDir } = await buildInto({ now: new Date('2026-10-19T12:00:00Z'), showAll: false });
+  for (const rel of ['assets/icons/f1-telemetry-pro.webp', 'assets/icons/ai-rules-builder.webp', 'assets/media/f1-telemetry-pro.webp', 'assets/media/ai-rules-builder.webp']) {
+    assert.equal(await exists(path.join(outDir, rel)), false, rel);
+  }
+  assert.ok(await exists(path.join(outDir, 'assets/icons/kurek.webp')));
+});

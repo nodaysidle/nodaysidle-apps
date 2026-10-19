@@ -43,11 +43,17 @@ export async function build({
   if (unreachable.length) console.warn(`claim check: GitHub not reachable for ${unreachable.length} repo(s), skipped`);
 
   const apps = visibleApps(data.apps, now, { showAll });
-
   await rm(outDir, { recursive: true, force: true });
   await mkdir(outDir, { recursive: true });
   await cp(path.join(root, 'public'), outDir, { recursive: true });
   await rm(path.join(outDir, 'assets/icons/src'), { recursive: true, force: true });
+  // Nothing of an unlaunched app may be reachable in production, not even its icon or screenshot.
+  const shown = new Set(apps.map((a) => a.id));
+  for (const hidden of data.apps.filter((a) => !shown.has(a.id))) {
+    for (const rel of [hidden.icon, hidden.media?.poster, hidden.media?.mp4, hidden.media?.webm].filter(Boolean)) {
+      await rm(path.join(outDir, rel), { force: true });
+    }
+  }
 
   await writeFile(path.join(outDir, 'index.html'), renderHome(data.site, apps));
   await writeFile(path.join(outDir, '404.html'), renderNotFound(data.site));

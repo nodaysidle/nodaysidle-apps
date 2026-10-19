@@ -62,7 +62,7 @@
       "name": "Cascade",
       "slug": "nodaysidle-cascade-v3",
       "version": "v3.1.1",
-      "released": "2026-10-16",
+      "released": "2026-10-17",
       "pitch": "Turn one software idea into five agent-ready markdown contracts.",
       "description": "One model call for product meaning; a local TypeScript compiler owns IDs, graph, files, and the five locked documents (PRD, ARD, TRD, TASKS, AGENTS) a coding agent can build from.",
       "features": [
@@ -90,14 +90,17 @@
           "url": "https://github.com/nodaysidle/nodaysidle-cascade-v3/releases/download/v3.1.0/NODAYSIDLE-Cascade-V3-3.1.0-aarch64.dmg",
           "size": 11644077,
           "sha256": "1aec1ffd45ce4dde171210a3ad1a0b195da0214316b2d1adb27e2657979ed3d9",
-          "macNote": true
+          "macNote": true,
+          "version": "v3.1.0",
+          "release": "https://github.com/nodaysidle/nodaysidle-cascade-v3/releases/tag/v3.1.0"
         },
         {
           "label": ".tar.gz",
           "platform": "Linux x86_64",
           "filename": "NODAYSIDLE-Cascade-V3-3.1.1-linux-x86_64.tar.gz",
           "url": "https://github.com/nodaysidle/nodaysidle-cascade-v3/releases/download/v3.1.1/NODAYSIDLE-Cascade-V3-3.1.1-linux-x86_64.tar.gz",
-          "size": 6937531
+          "size": 6937531,
+          "sha256": "dce2c15180cb4b59a60cd6e6367eb1c3bcff26cf14da9d5b250c2df4b1ab7609"
         },
         {
           "label": ".AppImage",
@@ -112,20 +115,21 @@
           "platform": "Linux x86_64",
           "filename": "NODAYSIDLE.Cascade.V3_3.1.1_amd64.deb",
           "url": "https://github.com/nodaysidle/nodaysidle-cascade-v3/releases/download/v3.1.1/NODAYSIDLE.Cascade.V3_3.1.1_amd64.deb",
-          "size": 8618360
+          "size": 8618360,
+          "sha256": "51469890854bea115b3b3c48b1693319f8c4debc09a03a23c0207f6a18b25eda"
         }
       ],
       "kind": "download",
       "icon": "/assets/icons/cascade.webp",
       "githubDescription": "macOS app that turns one software idea into five agent-ready markdown contracts.",
-      "showFrom": "2026-10-16T17:30:00+02:00"
+      "showFrom": "2026-10-17T17:30:00+02:00"
     },
     {
       "id": "sonora",
       "name": "Sonora",
       "slug": "nodaysidle-sonora",
       "version": "v0.1.2",
-      "released": "2026-10-16",
+      "released": "2026-10-17",
       "pitch": "Universal native desktop music player for Spotify, YouTube Music, and local files.",
       "description": "Sample-accurate gapless audio, EBU R128 loudness normalization, and synced lyrics with real-time romanization: built with Tauri 2 and Rust, with no application telemetry.",
       "features": [
@@ -151,7 +155,8 @@
           "platform": "Linux x86_64",
           "filename": "Sonora-0.1.2-1.x86_64.rpm",
           "url": "https://github.com/nodaysidle/nodaysidle-sonora/releases/download/v0.1.2/Sonora-0.1.2-1.x86_64.rpm",
-          "size": 17124017
+          "size": 17124017,
+          "sha256": "1f5267270ee2694513190c7c54d599daf296d56050a2eb3736216da0b2b3239a"
         },
         {
           "label": ".dmg",
@@ -159,7 +164,8 @@
           "filename": "Sonora_0.1.2_aarch64.dmg",
           "url": "https://github.com/nodaysidle/nodaysidle-sonora/releases/download/v0.1.2/Sonora_0.1.2_aarch64.dmg",
           "size": 16315230,
-          "macNote": true
+          "macNote": true,
+          "sha256": "158ba04124460819e87d0688fceb82fdd2dbf4a7c49f8cdb2cc444c2f17bc3b1"
         },
         {
           "label": ".AppImage",
@@ -174,7 +180,8 @@
           "platform": "Linux x86_64",
           "filename": "Sonora_0.1.2_amd64.deb",
           "url": "https://github.com/nodaysidle/nodaysidle-sonora/releases/download/v0.1.2/Sonora_0.1.2_amd64.deb",
-          "size": 17124308
+          "size": 17124308,
+          "sha256": "4c246760419cb6c48fea99190fdf603b2056a91f87a35a3f79e0362711bbf0e7"
         },
         {
           "label": ".app.tar.gz",
@@ -182,20 +189,21 @@
           "filename": "Sonora_aarch64.app.tar.gz",
           "url": "https://github.com/nodaysidle/nodaysidle-sonora/releases/download/v0.1.2/Sonora_aarch64.app.tar.gz",
           "size": 15829921,
-          "macNote": true
+          "macNote": true,
+          "sha256": "2038afb000f9a37836a18399db99bd215725741bb608f78186c19bfc36cbec8f"
         }
       ],
       "kind": "download",
       "icon": "/assets/icons/sonora.webp",
       "githubDescription": "Universal native desktop music player uniting Spotify, YouTube Music, and Local files. Built with Tauri v2 + Rust + React 19.",
-      "showFrom": "2026-10-16T17:30:00+02:00"
+      "showFrom": "2026-10-17T17:30:00+02:00"
     },
     {
       "id": "whisperbar",
       "name": "WhisperBar",
       "slug": "whisper-bar",
       "version": "v1.1.2",
-      "released": "2026-09-21",
+      "released": "2026-09-22",
       "pitch": "Native, privacy-first macOS menu bar dictation with real-time streaming.",
       "description": "100% native Swift 6 menu bar utility: live transcription HUD, smart LLM refinement when speech needs it, Keychain-only credentials, and zero third-party dependencies. Prebuilt release is Apple Silicon only (macOS 14+).",
       "features": [
@@ -228,16 +236,16 @@
       "kind": "download",
       "icon": "/assets/icons/whisperbar.webp",
       "githubDescription": "Native, privacy-first macOS menu bar dictation with Deepgram streaming, OpenRouter refinement, and zero dependencies.",
-      "showFrom": "2026-09-21T17:30:00+02:00"
+      "showFrom": "2026-09-22T17:30:00+02:00"
     },
     {
       "id": "browser-linux",
       "name": "NODAYSIDLE Browser for Linux",
       "slug": "nodaysidle-browser-linux",
       "version": "v0.2.1",
-      "released": "2026-10-16",
+      "released": "2026-10-17",
       "pitch": "A quiet, native Linux browser for focused browsing.",
-      "description": "Minimal chrome and native WebKit pages: Rust + GTK 3 + WebKitGTK 4.1, no Electron runtime, no application telemetry. Linux x86_64 AppImage only; system GTK 3 and WebKitGTK 4.1 required.",
+      "description": "Minimal chrome and native WebKit pages: Rust, GTK 3 and WebKitGTK 4.1, no Electron runtime, no application telemetry. One Linux x86_64 AppImage with GTK 3 and WebKitGTK 4.1 bundled inside.",
       "features": [
         "Native GTK 3 chrome backed by WebKitGTK 4.1",
         "Multi-tab browsing, in-page find, downloads",
@@ -267,7 +275,7 @@
       "kind": "download",
       "icon": "/assets/icons/browser-linux.webp",
       "githubDescription": "Native Linux WebKitGTK browser in Rust—focused browsing, local-first, no telemetry.",
-      "showFrom": "2026-10-16T17:30:00+02:00",
+      "showFrom": "2026-10-17T17:30:00+02:00",
       "shortName": "Browser"
     },
     {

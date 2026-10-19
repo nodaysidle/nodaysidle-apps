@@ -47,3 +47,10 @@ test('fetch failure is reported as unreachable, not thrown', async () => {
   assert.deepEqual(result.unreachable, ['https://github.com/nodaysidle/kureksistant']);
   assert.deepEqual(result.warnings, []);
 });
+
+test('check script logic: unreachable repos are not a clean pass', async () => {
+  const { summarise } = await import('../lib/claims.mjs');
+  assert.deepEqual(summarise({ warnings: [], unreachable: ['r'] }), { exitCode: 2, message: 'Claim check incomplete: 1 repo(s) not reachable.' });
+  assert.deepEqual(summarise({ warnings: [], unreachable: [] }), { exitCode: 0, message: 'Claim check clean.' });
+  assert.equal(summarise({ warnings: ['x'], unreachable: ['r'] }).exitCode, 1);
+});

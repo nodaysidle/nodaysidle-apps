@@ -150,3 +150,17 @@ test('no demo without media', () => {
   const html = renderAppPage(site, bare, 0, [bare]);
   assert.doesNotMatch(html, /class="demo"/);
 });
+
+test('a download from an older release gets its own link', () => {
+  const cascade = {
+    ...sonora, id: 'cascade', name: 'Cascade', version: 'v3.1.1',
+    release: 'https://github.com/nodaysidle/nodaysidle-cascade-v3/releases/tag/v3.1.1',
+    downloads: [
+      { label: '.dmg', platform: 'macOS Apple Silicon', filename: 'c.dmg', url: 'https://github.com/x/c.dmg', size: 1, version: 'v3.1.0', release: 'https://github.com/nodaysidle/nodaysidle-cascade-v3/releases/tag/v3.1.0' },
+      { label: '.AppImage', platform: 'Linux x86_64', filename: 'c.AppImage', url: 'https://github.com/x/c.AppImage', size: 2 },
+    ],
+  };
+  const html = renderAppPage(site, cascade, 0, [cascade]);
+  assert.match(html, /<a class="src" href="https:\/\/github\.com\/nodaysidle\/nodaysidle-cascade-v3\/releases\/tag\/v3\.1\.0">macOS \.dmg v3\.1\.0 on GitHub<\/a>/);
+  assert.match(html, /\.dmg \(v3\.1\.0\) 1 B/);
+});
