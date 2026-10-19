@@ -1,31 +1,83 @@
 {
   "site": {
-    "title": "NODAYSIDLE Apps — Desktop tools, a Chrome extension & Kurek",
-    "description": "Download NODAYSIDLE desktop apps, a Chrome extension, and Kurek: Cascade, Sonora, WhisperBar, NODAYSIDLE Browser for Linux, nodaysrammar, and Kurek. macOS Apple Silicon and Linux x86_64 builds, plus a Chromium MV3 extension, from GitHub Releases.",
+    "title": "NODAYSIDLE",
+    "description": "Native apps for macOS, Linux, Chrome and the web, built by one studio and released on a schedule.",
     "url": "https://nodaysidle-apps.vercel.app",
-    "portfolio": "https://nodaysidle-portfolio-nine.vercel.app",
     "github": "https://github.com/nodaysidle",
     "repo": "https://github.com/nodaysidle/nodaysidle-apps"
   },
   "apps": [
     {
+      "id": "ai-rules-builder",
+      "name": "AI Rules Builder",
+      "kind": "web",
+      "repo": "https://github.com/nodaysidle/markdown-helper",
+      "liveUrl": "https://markdown-helper.vercel.app",
+      "platformLabel": "Web",
+      "licence": "MIT",
+      "pitch": "Create, preview and share AGENTS.md and Cursor rules for AI coding agents.",
+      "description": "Every coding agent expects a different rules file. Pick the target tool, switch rule sets on or off, and export the correctly named file. It runs in your browser: no account, no database, no tracking.",
+      "features": [
+        "20 editable rule sets in 7 categories, each switchable on its own",
+        "Drop in package.json or requirements.txt and get matching rule sets suggested, parsed in the browser",
+        "Output for AGENTS.md (Codex, Command Code, agy, deepseek-harness), .cursor/rules/*.mdc and legacy .cursorrules",
+        "Live preview with copy, download and a token estimate",
+        "Share links that carry the whole configuration, plus a read-only JSON API at /api/rules"
+      ],
+      "githubDescription": "Create and export AGENTS.md and Cursor rules for AI coding agents. Live demo on Vercel.",
+      "icon": "/assets/icons/ai-rules-builder.webp",
+      "showFrom": "2026-10-21T17:30:00+02:00",
+      "media": {
+        "poster": "/assets/media/ai-rules-builder.webp",
+        "alt": "AI Rules Builder: rule switches on the left, live AGENTS.md preview on the right"
+      }
+    },
+    {
+      "id": "f1-telemetry-pro",
+      "name": "F1 Telemetry Pro",
+      "kind": "web",
+      "repo": "https://github.com/nodaysidle/F1-nodaysidle",
+      "liveUrl": "https://f1-telemetry-pro.vercel.app",
+      "platformLabel": "Web",
+      "licence": "MIT",
+      "pitch": "Formula 1 telemetry analysis and session replay in the browser, on real OpenF1 timing data.",
+      "description": "Pick up to four drivers and laps from any session since 2023. Speed, throttle, brake, gear, DRS and time delta line up on one distance axis, with a single scrub needle driving every chart and the track map.",
+      "features": [
+        "Up to four drivers compared at once, each with its own season, session, lap and tyre",
+        "Track delta map in 100 m micro-sectors: green where the comparison gains, red where it loses",
+        "Lift and coast detection marked on the charts and the map",
+        "Session replay with every car on the map and a live timing tower",
+        "Runs entirely in the browser, with a cache so a reloaded lap needs no network"
+      ],
+      "githubDescription": "Client-side F1 telemetry analysis and session replay on real OpenF1 data: 4-driver lap overlays, track delta maps, lift & coast detection, 60 FPS scrubbing.",
+      "icon": "/assets/icons/f1-telemetry-pro.webp",
+      "showFrom": "2026-10-24T17:30:00+02:00",
+      "media": {
+        "poster": "/assets/media/f1-telemetry-pro.webp",
+        "alt": "F1 Telemetry Pro: four-driver lap analysis, 2024 Belgian GP qualifying"
+      }
+    },
+    {
       "id": "cascade",
       "name": "Cascade",
       "slug": "nodaysidle-cascade-v3",
-      "version": "v3.1.0",
-      "released": "2026-09-27",
+      "version": "v3.1.1",
+      "released": "2026-10-16",
       "pitch": "Turn one software idea into five agent-ready markdown contracts.",
       "description": "One model call for product meaning; a local TypeScript compiler owns IDs, graph, files, and the five locked documents (PRD, ARD, TRD, TASKS, AGENTS) a coding agent can build from.",
       "features": [
-        "Semantic intake schema — features, data, integrations, constraints",
+        "Semantic intake schema: features, data, integrations, constraints",
         "Five locked presets: macOS SwiftUI desktop & menubar, Tauri 2, Astro, Android Compose",
         "Exact-five export with SHA-256 equality between preview and export",
         "Safe provider boundary: memory-only credentials, at most one repair request"
       ],
-      "platforms": ["macOS Apple Silicon", "Linux x86_64"],
+      "platforms": [
+        "macOS Apple Silicon",
+        "Linux x86_64"
+      ],
       "licence": "MIT",
       "repo": "https://github.com/nodaysidle/nodaysidle-cascade-v3",
-      "release": "https://github.com/nodaysidle/nodaysidle-cascade-v3/releases/tag/v3.1.0",
+      "release": "https://github.com/nodaysidle/nodaysidle-cascade-v3/releases/tag/v3.1.1",
       "media": {
         "poster": "/assets/media/cascade.webp",
         "mp4": "/assets/media/cascade.mp4",
@@ -47,50 +99,54 @@
           "macNote": true
         },
         {
+          "label": ".tar.gz",
+          "platform": "Linux x86_64",
+          "filename": "NODAYSIDLE-Cascade-V3-3.1.1-linux-x86_64.tar.gz",
+          "url": "https://github.com/nodaysidle/nodaysidle-cascade-v3/releases/download/v3.1.1/NODAYSIDLE-Cascade-V3-3.1.1-linux-x86_64.tar.gz",
+          "size": 6937531
+        },
+        {
           "label": ".AppImage",
           "platform": "Linux x86_64",
-          "filename": "NODAYSIDLE.Cascade.V3_3.1.0_amd64.AppImage",
-          "url": "https://github.com/nodaysidle/nodaysidle-cascade-v3/releases/download/v3.1.0/NODAYSIDLE.Cascade.V3_3.1.0_amd64.AppImage",
-          "size": 86354424,
-          "sha256": "fe784421f37d6148e1c8f13639ad261cbe930ab6357f8d25528e9c8ed120eac4",
-          "linuxAppImage": true
+          "filename": "NODAYSIDLE.Cascade.V3_3.1.1_amd64.AppImage",
+          "url": "https://github.com/nodaysidle/nodaysidle-cascade-v3/releases/download/v3.1.1/NODAYSIDLE.Cascade.V3_3.1.1_amd64.AppImage",
+          "size": 86325752,
+          "sha256": "d61242f395a4d105fe309fc23cc10d99cd48d3a58609a75051f2937a94d0e30a"
         },
         {
           "label": ".deb",
           "platform": "Linux x86_64",
-          "filename": "NODAYSIDLE.Cascade.V3_3.1.0_amd64.deb",
-          "url": "https://github.com/nodaysidle/nodaysidle-cascade-v3/releases/download/v3.1.0/NODAYSIDLE.Cascade.V3_3.1.0_amd64.deb",
-          "size": 8603022,
-          "sha256": "5dddd77aef0f4c5156cd1987547ebda5f3e06f795ba11d6809a87c08dedb297e"
-        },
-        {
-          "label": ".tar.gz",
-          "platform": "Linux x86_64",
-          "filename": "NODAYSIDLE-Cascade-V3-3.1.0-linux-x86_64.tar.gz",
-          "url": "https://github.com/nodaysidle/nodaysidle-cascade-v3/releases/download/v3.1.0/NODAYSIDLE-Cascade-V3-3.1.0-linux-x86_64.tar.gz",
-          "size": 6917341,
-          "sha256": "f3e7693d2d9ed9657fca75f4168295c4283ca280a0636537ce606990419b83b3"
+          "filename": "NODAYSIDLE.Cascade.V3_3.1.1_amd64.deb",
+          "url": "https://github.com/nodaysidle/nodaysidle-cascade-v3/releases/download/v3.1.1/NODAYSIDLE.Cascade.V3_3.1.1_amd64.deb",
+          "size": 8618360
         }
-      ]
+      ],
+      "kind": "download",
+      "icon": "/assets/icons/cascade.webp",
+      "githubDescription": "macOS app that turns one software idea into five agent-ready markdown contracts.",
+      "showFrom": "2026-10-16T17:30:00+02:00"
     },
     {
       "id": "sonora",
       "name": "Sonora",
       "slug": "nodaysidle-sonora",
-      "version": "v0.1.1",
-      "released": "2026-09-16",
+      "version": "v0.1.2",
+      "released": "2026-10-16",
       "pitch": "Universal native desktop music player for Spotify, YouTube Music, and local files.",
-      "description": "Sample-accurate gapless audio, EBU R128 loudness normalization, and synced lyrics with real-time romanization — built with Tauri 2 and Rust, with no application telemetry.",
+      "description": "Sample-accurate gapless audio, EBU R128 loudness normalization, and synced lyrics with real-time romanization: built with Tauri 2 and Rust, with no application telemetry.",
       "features": [
         "Unified queue for local files, Spotify, and YouTube Music",
         "Sample-accurate gapless transitions via double-buffering pre-roll",
         "Studio-grade EBU R128 loudness normalization (−14 LUFS)",
         "Synced lyrics with Kanji/Hangul/Pinyin/Cyrillic romanization"
       ],
-      "platforms": ["macOS Apple Silicon", "Linux x86_64"],
+      "platforms": [
+        "Linux x86_64",
+        "macOS Apple Silicon"
+      ],
       "licence": "MIT",
       "repo": "https://github.com/nodaysidle/nodaysidle-sonora",
-      "release": "https://github.com/nodaysidle/nodaysidle-sonora/releases/tag/v0.1.1",
+      "release": "https://github.com/nodaysidle/nodaysidle-sonora/releases/tag/v0.1.2",
       "media": {
         "poster": "/assets/media/sonora.webp",
         "mp4": "/assets/media/sonora.mp4",
@@ -103,49 +159,48 @@
       },
       "downloads": [
         {
-          "label": ".dmg",
-          "platform": "macOS Apple Silicon",
-          "filename": "Sonora_0.1.1_aarch64.dmg",
-          "url": "https://github.com/nodaysidle/nodaysidle-sonora/releases/download/v0.1.1/Sonora_0.1.1_aarch64.dmg",
-          "size": 16952813,
-          "sha256": "85bb22139854ac444524fee4c76769c755cf86f01f991de43dd1d0cdcd559727",
-          "macNote": true
+          "label": ".rpm",
+          "platform": "Linux x86_64",
+          "filename": "Sonora-0.1.2-1.x86_64.rpm",
+          "url": "https://github.com/nodaysidle/nodaysidle-sonora/releases/download/v0.1.2/Sonora-0.1.2-1.x86_64.rpm",
+          "size": 17124017
         },
         {
-          "label": ".app.tar.gz",
+          "label": ".dmg",
           "platform": "macOS Apple Silicon",
-          "filename": "Sonora_aarch64.app.tar.gz",
-          "url": "https://github.com/nodaysidle/nodaysidle-sonora/releases/download/v0.1.1/Sonora_aarch64.app.tar.gz",
-          "size": 16472041,
-          "sha256": "fe18857a35bd87a9951ed83fdd4c6eae031e7114a95067990f42263634947b9d",
+          "filename": "Sonora_0.1.2_aarch64.dmg",
+          "url": "https://github.com/nodaysidle/nodaysidle-sonora/releases/download/v0.1.2/Sonora_0.1.2_aarch64.dmg",
+          "size": 16315230,
           "macNote": true
         },
         {
           "label": ".AppImage",
           "platform": "Linux x86_64",
-          "filename": "Sonora_0.1.1_amd64.AppImage",
-          "url": "https://github.com/nodaysidle/nodaysidle-sonora/releases/download/v0.1.1/Sonora_0.1.1_amd64.AppImage",
-          "size": 95066616,
-          "sha256": "16e9bdc29e9f6a6f9eef3a247f659ab7b41fc7eab85893b63324ca02be87346c",
-          "linuxAppImage": true
+          "filename": "Sonora_0.1.2_amd64.AppImage",
+          "url": "https://github.com/nodaysidle/nodaysidle-sonora/releases/download/v0.1.2/Sonora_0.1.2_amd64.AppImage",
+          "size": 94943736,
+          "sha256": "59970e90149f77307b7c0229c297d74bac8c32e0ab81660b4175f36de67b0124"
         },
         {
           "label": ".deb",
           "platform": "Linux x86_64",
-          "filename": "Sonora_0.1.1_amd64.deb",
-          "url": "https://github.com/nodaysidle/nodaysidle-sonora/releases/download/v0.1.1/Sonora_0.1.1_amd64.deb",
-          "size": 17848338,
-          "sha256": "2f8ca891093d216ec0737bc70b5898c0eef5b80d295807843088ad81fbae2ecb"
+          "filename": "Sonora_0.1.2_amd64.deb",
+          "url": "https://github.com/nodaysidle/nodaysidle-sonora/releases/download/v0.1.2/Sonora_0.1.2_amd64.deb",
+          "size": 17124308
         },
         {
-          "label": ".rpm",
-          "platform": "Linux x86_64",
-          "filename": "Sonora-0.1.1-1.x86_64.rpm",
-          "url": "https://github.com/nodaysidle/nodaysidle-sonora/releases/download/v0.1.1/Sonora-0.1.1-1.x86_64.rpm",
-          "size": 17846787,
-          "sha256": "6defc8d52d00a181774ef4003d99acbf715e18d7a97d2d32555508f8c63c88b6"
+          "label": ".app.tar.gz",
+          "platform": "macOS Apple Silicon",
+          "filename": "Sonora_aarch64.app.tar.gz",
+          "url": "https://github.com/nodaysidle/nodaysidle-sonora/releases/download/v0.1.2/Sonora_aarch64.app.tar.gz",
+          "size": 15829921,
+          "macNote": true
         }
-      ]
+      ],
+      "kind": "download",
+      "icon": "/assets/icons/sonora.webp",
+      "githubDescription": "Universal native desktop music player uniting Spotify, YouTube Music, and Local files. Built with Tauri v2 + Rust + React 19.",
+      "showFrom": "2026-10-16T17:30:00+02:00"
     },
     {
       "id": "whisperbar",
@@ -161,7 +216,9 @@
         "API keys stored only in the macOS Keychain",
         "Local SQLite transcript history with FTS5 search"
       ],
-      "platforms": ["macOS Apple Silicon"],
+      "platforms": [
+        "macOS Apple Silicon"
+      ],
       "licence": "MIT",
       "repo": "https://github.com/nodaysidle/whisper-bar",
       "release": "https://github.com/nodaysidle/whisper-bar/releases/tag/v1.1.2",
@@ -185,28 +242,33 @@
           "macNote": true,
           "shaSource": "README + GitHub asset digest"
         }
-      ]
+      ],
+      "kind": "download",
+      "icon": "/assets/icons/whisperbar.webp",
+      "githubDescription": "Native, privacy-first macOS menu bar dictation with Deepgram streaming, OpenRouter refinement, and zero dependencies.",
+      "showFrom": "2026-09-21T17:30:00+02:00"
     },
     {
       "id": "browser-linux",
       "name": "NODAYSIDLE Browser for Linux",
       "slug": "nodaysidle-browser-linux",
-      "version": "v0.2.0",
-      "released": "2026-10-14",
+      "version": "v0.2.1",
+      "released": "2026-10-16",
       "pitch": "A quiet, native Linux browser for focused browsing.",
-      "description": "Minimal chrome and native WebKit pages — Rust + GTK 3 + WebKitGTK 4.1, no Electron runtime, no application telemetry. Linux x86_64 AppImage only; system GTK 3 and WebKitGTK 4.1 required.",
+      "description": "Minimal chrome and native WebKit pages: Rust + GTK 3 + WebKitGTK 4.1, no Electron runtime, no application telemetry. Linux x86_64 AppImage only; system GTK 3 and WebKitGTK 4.1 required.",
       "features": [
         "Native GTK 3 chrome backed by WebKitGTK 4.1",
         "Multi-tab browsing, in-page find, downloads",
         "Multiple windows sharing one profile (Ctrl+N or --new-window)",
         "Hyprland corner inset matching decoration:rounding (0 when tiled, maximized, or fullscreen)",
-        "Local-first history and cookies (0600 permissions)",
-        "Wayland app_id / X11 WM_CLASS: com.nodaysidle.Browser"
+        "Local-first history and cookies (0600 permissions)"
       ],
-      "platforms": ["Linux x86_64"],
+      "platforms": [
+        "Linux x86_64"
+      ],
       "licence": "No licence specified",
       "repo": "https://github.com/nodaysidle/nodaysidle-browser-linux",
-      "release": "https://github.com/nodaysidle/nodaysidle-browser-linux/releases/tag/v0.2.0",
+      "release": "https://github.com/nodaysidle/nodaysidle-browser-linux/releases/tag/v0.2.1",
       "media": {
         "poster": "/assets/media/browser-linux.webp",
         "mp4": "/assets/media/browser-linux.mp4",
@@ -214,19 +276,22 @@
         "alt": "NODAYSIDLE Browser for Linux demo"
       },
       "notes": {
-        "linux": "chmod +x the AppImage. Requires system GTK 3 + WebKitGTK 4.1 (e.g. gtk3 and webkit2gtk-4.1 on Arch)."
+        "linux": "chmod +x the AppImage, then run it. GTK 3 and WebKitGTK 4.1 are bundled inside, so nothing else needs installing."
       },
       "downloads": [
         {
           "label": ".AppImage",
           "platform": "Linux x86_64",
-          "filename": "nodaysidle-browser-x86_64.AppImage",
-          "url": "https://github.com/nodaysidle/nodaysidle-browser-linux/releases/download/v0.2.0/nodaysidle-browser-x86_64.AppImage",
-          "size": 1530360,
-          "sha256": "02d7a85c3d99f5e395425722c57c46d12fabceccd063554b7f01c2b43229ad93",
-          "linuxAppImage": true
+          "filename": "nodaysidle-browser-bundled-x86_64.AppImage",
+          "url": "https://github.com/nodaysidle/nodaysidle-browser-linux/releases/download/v0.2.1/nodaysidle-browser-bundled-x86_64.AppImage",
+          "size": 91916792,
+          "sha256": "4fa962df7cc6cd405de863289b17436dfae57a8321491a580939f204db31c7a6"
         }
-      ]
+      ],
+      "kind": "download",
+      "icon": "/assets/icons/browser-linux.webp",
+      "githubDescription": "Native Linux WebKitGTK browser in Rust—focused browsing, local-first, no telemetry.",
+      "showFrom": "2026-10-16T17:30:00+02:00"
     },
     {
       "id": "nodaysrammar",
@@ -235,14 +300,16 @@
       "version": "v1.0.1",
       "released": "2026-10-09",
       "pitch": "Private, on-device grammar and spell checker for English, Italian, and Slovenian.",
-      "description": "Works offline with no telemetry; settings sync via Chrome Sync. Engine: ~35k-word dictionaries, grammar rules, and a small JS classifier. Sideload from the release zip — not on the Chrome Web Store.",
+      "description": "Works offline with no telemetry; settings sync via Chrome Sync. Engine: ~35k-word dictionaries, grammar rules, and a small JS classifier. Sideload from the release zip: not on the Chrome Web Store.",
       "features": [
         "Inline underline with suggestion card",
         "Fix All for the current field",
         "Per-site blocklist",
         "EN / IT / SL with in-page language switch"
       ],
-      "platforms": ["Chrome / Chromium (MV3)"],
+      "platforms": [
+        "Chrome / Chromium (MV3)"
+      ],
       "licence": "MIT",
       "repo": "https://github.com/nodaysidle/nodaysrammar",
       "release": "https://github.com/nodaysidle/nodaysrammar/releases/tag/v1.0.1",
@@ -264,7 +331,11 @@
           "size": 740320,
           "sha256": "31d86ad88491798dbc7a891793cf4824681244e734ab4fb4935db9567a5a6e6d"
         }
-      ]
+      ],
+      "kind": "download",
+      "icon": "/assets/icons/nodaysrammar.webp",
+      "githubDescription": "On-device, zero-telemetry multilingual grammar and spell checker for Chromium (Manifest V3)",
+      "showFrom": "2026-10-09T17:30:00+02:00"
     },
     {
       "id": "kurek",
@@ -281,7 +352,9 @@
         "~450MB peak RAM observed with Whisper loaded",
         "Voice control of your PC, including remotely from an Android app over Tailscale (token-authenticated, opt-in with KUREK_REMOTE_BIND=tailscale)"
       ],
-      "platforms": ["Linux x86_64 (Arch / Hyprland)"],
+      "platforms": [
+        "Linux x86_64 (Arch / Hyprland)"
+      ],
       "licence": "CC BY-NC 4.0",
       "repo": "https://github.com/nodaysidle/kureksistant",
       "release": "https://github.com/nodaysidle/kureksistant/releases/tag/v0.2.1",
@@ -304,7 +377,11 @@
           "size": 3623852,
           "sha256": "8b3a7a6ec36795d6651a3b38d36b62f5dc1590a5a17abe1a3604ecf8c7a96b33"
         }
-      ]
+      ],
+      "kind": "download",
+      "icon": "/assets/icons/kurek.webp",
+      "githubDescription": "Autonomous, sub-second personal AI assistant for Arch Linux (Hyprland) & macOS. Features ~333MB RAM headless daemon, Middle Click   hardware summon, Muse Memory, TypeSafe Jev System One cognitive gating, DeepSeek-Flash reasoning, and xAI Grok (Sol) voice.",
+      "showFrom": "2026-10-14T17:30:00+02:00"
     }
   ]
 }
