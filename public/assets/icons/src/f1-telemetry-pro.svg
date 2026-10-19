@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#202328"/>
+      <stop offset="1" stop-color="#090a0c"/>
+    </linearGradient>
+    <linearGradient id="trace" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#f4f4f4"/>
+      <stop offset=".62" stop-color="#f4f4f4"/>
+      <stop offset=".78" stop-color="#ff2a1a"/>
+      <stop offset="1" stop-color="#ff2a1a"/>
+    </linearGradient>
+  </defs>
+  <rect x="16" y="16" width="480" height="480" rx="108" fill="url(#bg)"/>
+  <rect x="16.5" y="16.5" width="479" height="479" rx="107.5" fill="none" stroke="#ffffff" stroke-opacity=".09"/>
+  <!-- lap-distance baseline -->
+  <path d="M104 352 H408" stroke="#ffffff" stroke-opacity=".12" stroke-width="4" stroke-linecap="round"/>
+  <!-- speed trace over one lap: a long straight, a heavy braking zone, two corners, a flat-out exit -->
+  <path d="M104 196 C170 186 196 186 214 212 C230 236 236 300 258 304 C282 308 284 236 304 222 C320 212 328 268 344 270 C364 272 370 176 408 170"
+        fill="none" stroke="url(#trace)" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="408" cy="170" r="20" fill="#ff2a1a"/>
+  <circle cx="408" cy="170" r="8" fill="#090a0c"/>
+</svg>

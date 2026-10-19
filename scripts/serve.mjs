@@ -25,6 +25,12 @@ const types = {
 if (!production) await build();
 
 const dist = path.join(root, 'dist');
+
+// Same behaviour as Vercel: unknown paths get dist/404.html with status 404.
+async function notFound(res) {
+  const body = await readFile(path.join(dist, '404.html')).catch(() => 'Not found');
+  res.writeHead(404, { 'Content-Type': types['.html'] }).end(body);
+}
 const server = createServer(async (req, res) => {
   try {
     const url = new URL(req.url || '/', `http://${req.headers.host}`);
@@ -37,7 +43,7 @@ const server = createServer(async (req, res) => {
     }
     const info = await stat(filePath);
     if (!info.isFile()) {
-      res.writeHead(404).end('Not found');
+      await notFound(res);
       return;
     }
     const ext = path.extname(filePath);
@@ -45,7 +51,7 @@ const server = createServer(async (req, res) => {
     res.writeHead(200, { 'Content-Type': types[ext] || 'application/octet-stream' });
     res.end(body);
   } catch {
-    res.writeHead(404).end('Not found');
+    await notFound(res);
   }
 });
 
