@@ -116,3 +116,6 @@ img, video { display: block; max-width: 100%; }
   .app .icon, .next-icon, .btn, .next b, .lights i { transition: none; }
   .app:hover .icon, .app:focus-visible .icon, .next:hover .next-icon, .next:focus-visible .next-icon { transform: none; }
 }
+
+/* Minimum 44px tap target for the small mono links and the checksum toggle. */
+.wordmark, .bar a, .src, .footer a, .verify summary { min-height: 44px; display: inline-flex; align-items: center; padding-top: 0; padding-bottom: 0; }
