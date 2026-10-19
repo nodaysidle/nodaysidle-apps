@@ -56,7 +56,9 @@ The structure follows `app-page-v1.html`:
   - A mono note under the primary button: "Opens the GitHub release page: release notes, checksums and the download."
   - Existing per-platform notes, such as the macOS right-click-open note and the Linux AppImage note, stay as small notes on the page.
 - **Demo video:** muted, looping, inline. It doesn't autoplay with `prefers-reduced-motion`; the poster image shows instead. F1 Telemetry Pro and AI Rules Builder need a clip or a real screenshot. F1 has `docs/screenshots/*.png` in its repo, and AI Rules Builder needs a capture from its live URL. These clips are separate tasks for REEL, and the builder may show a real screenshot until they exist.
-- **"Next app":** at the bottom, the next app's name and its grey icon, which gets its colour back on hover. It wraps from the last app back to the first. This is what pulls visitors through every app.
+- **"Next app":** at the bottom, the next app's name and icon. It wraps from the last app back to the first, and it's what pulls visitors through every app. Kaly's review on 2026-10-19, as approved in `app-page-v2.html`:
+  - The name sits dimmed at rest, `#8f8f8f` (about 6.6:1 contrast), at 32 px, and the icon is greyscale and dimmed.
+  - On hover or keyboard focus the name turns `#f2f2f2`, the icon gets its colour back, and the icon lifts 4 px, the same logic as the homepage icons.
 
 ## Visual system
 
