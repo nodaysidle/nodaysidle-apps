@@ -11,15 +11,16 @@
       "id": "vectorstudio",
       "name": "VectorStudio",
       "slug": "no-vector-days",
-      "version": "v0.1.1",
+      "version": "v0.2.0",
       "released": "2026-10-22",
       "pitch": "A small desktop vector editor for Linux that keeps your work on your machine.",
-      "description": "Shapes, text and a Bézier pen on one page, with layers, a properties panel and undo for every edit. Exports SVG and PNG that match the page you drew. Runs natively on Wayland; no account, no network requests.",
+      "description": "Shapes, text and a Bézier pen on one page, with layers, a properties panel and undo for every edit. Opens existing SVG files as editable layers and exports SVG and PNG that match the page you drew. Runs natively on Wayland; no account, no network requests.",
       "features": [
         "Rectangle, ellipse, triangle, star, line, arrow and text: pick a tool, click to place",
         "Bézier pen with point and handle editing",
         "Layers and properties panel: position, size, rotation, fill, stroke, opacity, align, order",
         "SVG export that keeps rotation, corner radius and text; PNG at 2× of the page only",
+        "Opens existing SVG files as editable layers: shapes, paths with holes, text, groups and transforms",
         "Autosave on your machine, plus Open, Save and Save as for .json design files; Save writes back to the open file"
       ],
       "platforms": [
@@ -27,7 +28,7 @@
       ],
       "licence": "MIT",
       "repo": "https://github.com/nodaysidle/no-vector-days",
-      "release": "https://github.com/nodaysidle/no-vector-days/releases/tag/v0.1.1",
+      "release": "https://github.com/nodaysidle/no-vector-days/releases/tag/v0.2.0",
       "notes": {
         "linux": "chmod +x the AppImage, then run it. AppImages need FUSE 2 (fuse2 on Arch); without it, run with APPIMAGE_EXTRACT_AND_RUN=1."
       },
@@ -35,10 +36,10 @@
         {
           "label": ".AppImage",
           "platform": "Linux x86_64",
-          "filename": "VectorStudio-0.1.1-x86_64.AppImage",
-          "url": "https://github.com/nodaysidle/no-vector-days/releases/download/v0.1.1/VectorStudio-0.1.1-x86_64.AppImage",
-          "size": 129417275,
-          "sha256": "84697785e9db10bad2d64f24067cf48a56b25dad82dc4976b7f3e71bd387e98c"
+          "filename": "VectorStudio-0.2.0-x86_64.AppImage",
+          "url": "https://github.com/nodaysidle/no-vector-days/releases/download/v0.2.0/VectorStudio-0.2.0-x86_64.AppImage",
+          "size": 129429566,
+          "sha256": "5cbae07563efdb9a4b4ea1d650f879f14377e13b72d8356bb056b05953a6c22f"
         }
       ],
       "kind": "download",
