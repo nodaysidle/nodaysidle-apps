@@ -16,7 +16,7 @@ async function buildInto(opts) {
 
 test('writes index and one page per visible app', async () => {
   const { outDir } = await buildInto({ now: new Date('2026-10-25T12:00:00Z'), showAll: false });
-  assert.match(await readFile(path.join(outDir, 'index.html'), 'utf8'), /Eight apps shipped\./);
+  assert.match(await readFile(path.join(outDir, 'index.html'), 'utf8'), /Nine apps shipped\./);
   for (const id of ['kurek', 'sonora', 'f1-telemetry-pro', 'ai-rules-builder']) {
     assert.ok(await exists(path.join(outDir, 'apps', id, 'index.html')), id);
   }
@@ -34,7 +34,8 @@ test('future app has no page in production build', async () => {
 
 test('build succeeds when GitHub is unreachable', async () => {
   const { result } = await buildInto({ now: new Date('2026-10-19T12:00:00Z'), showAll: true });
-  assert.equal(result.pages.length, 8);
+  const { apps } = JSON.parse(await readFile(new URL('../data/apps.json', import.meta.url), 'utf8'));
+  assert.equal(result.pages.length, apps.length);
 });
 
 test('production build ships no assets of unlaunched apps', async () => {

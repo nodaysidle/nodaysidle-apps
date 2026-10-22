@@ -8,6 +8,49 @@
   },
   "apps": [
     {
+      "id": "vectorstudio",
+      "name": "VectorStudio",
+      "slug": "no-vector-days",
+      "version": "v0.1.0",
+      "released": "2026-10-22",
+      "pitch": "A small desktop vector editor for Linux that keeps your work on your machine.",
+      "description": "Shapes, text and a Bézier pen on one page, with layers, a properties panel and undo for every edit. Exports SVG and PNG that match the page you drew. Runs natively on Wayland; no account, no network requests.",
+      "features": [
+        "Rectangle, ellipse, triangle, star, line, arrow and text: pick a tool, click to place",
+        "Bézier pen with point and handle editing",
+        "Layers and properties panel: position, size, rotation, fill, stroke, opacity, align, order",
+        "SVG export that keeps rotation, corner radius and text; PNG at 2× of the page only",
+        "Autosave on your machine, plus Open and Save for .json design files"
+      ],
+      "platforms": [
+        "Linux x86_64"
+      ],
+      "licence": "MIT",
+      "repo": "https://github.com/nodaysidle/no-vector-days",
+      "release": "https://github.com/nodaysidle/no-vector-days/releases/tag/v0.1.0",
+      "notes": {
+        "linux": "chmod +x the AppImage, then run it. AppImages need FUSE 2 (fuse2 on Arch); without it, run with APPIMAGE_EXTRACT_AND_RUN=1."
+      },
+      "downloads": [
+        {
+          "label": ".AppImage",
+          "platform": "Linux x86_64",
+          "filename": "VectorStudio-0.1.0-x86_64.AppImage",
+          "url": "https://github.com/nodaysidle/no-vector-days/releases/download/v0.1.0/VectorStudio-0.1.0-x86_64.AppImage",
+          "size": 129417275,
+          "sha256": "001d0bbe681598dce9f858094602abbaa5f08122ba59fba9eb50bb69a7a61e31"
+        }
+      ],
+      "kind": "download",
+      "icon": "/assets/icons/vectorstudio.webp",
+      "githubDescription": "Desktop vector editor for Linux: shapes, Bézier pen, layers, SVG and PNG export. Native Wayland AppImage.",
+      "showFrom": "2026-10-22T23:14:00+02:00",
+      "media": {
+        "poster": "/assets/media/vectorstudio.webp",
+        "alt": "VectorStudio: layers on the left, the page in the middle, properties of the selected triangle on the right"
+      }
+    },
+    {
       "id": "ai-rules-builder",
       "name": "AI Rules Builder",
       "kind": "web",
