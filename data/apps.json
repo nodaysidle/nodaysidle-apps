@@ -8,6 +8,51 @@
   },
   "apps": [
     {
+      "id": "neuralcanvas",
+      "name": "NeuralCanvas",
+      "slug": "neural-canvas",
+      "version": "v0.1.0",
+      "released": "2026-10-25",
+      "pitch": "Sketch an interface by hand and get a clean wireframe, on a GPU canvas for Linux.",
+      "description": "Draw layouts with a mouse or pen on an infinite canvas. NeuralCanvas recognises buttons, inputs, cards and text locally, shows an editable wireframe over the sketch, restyles it from a screenshot and exports SVG, PDF, PNG and JPEG. No account, no network.",
+      "features": [
+        "Recognises 15 shape types on a worker thread (96.7% on held-out fixtures, 55 ms for 2,000 strokes)",
+        "Sketch, hybrid, wireframe and side-by-side views, with uncertain items marked for review",
+        "Style mirror: palette, corner radius and spacing from a screenshot, with a WCAG 2.1 AA check",
+        "SVG, PDF, PNG (2×) and JPEG export for the sketch and the wireframe",
+        "Holds 120 Hz at 1440p on an Intel Arc iGPU; 111 ms cold start, 68 MB idle",
+        "Saved within 300 ms of every change in a local SQLite database"
+      ],
+      "platforms": [
+        "Linux x86_64 (Arch / Wayland / Hyprland)"
+      ],
+      "licence": "MIT",
+      "repo": "https://github.com/nodaysidle/neural-canvas",
+      "release": "https://github.com/nodaysidle/neural-canvas/releases/tag/v0.1.0",
+      "sums": "https://github.com/nodaysidle/neural-canvas/releases/download/v0.1.0/NeuralCanvas-0.1.0-x86_64.AppImage.sha256",
+      "notes": {
+        "linux": "chmod +x the AppImage, then run it. It needs a working Vulkan driver and uses your system's Wayland library."
+      },
+      "downloads": [
+        {
+          "label": ".AppImage",
+          "platform": "Linux x86_64",
+          "filename": "NeuralCanvas-0.1.0-x86_64.AppImage",
+          "url": "https://github.com/nodaysidle/neural-canvas/releases/download/v0.1.0/NeuralCanvas-0.1.0-x86_64.AppImage",
+          "size": 9665016,
+          "sha256": "80fd1df052b91f46692bbba8b78619a14f2195dd5558940c882caf18f49d2247"
+        }
+      ],
+      "kind": "download",
+      "icon": "/assets/icons/neuralcanvas.webp",
+      "githubDescription": "GPU-accelerated sketch-to-wireframe canvas for Linux: freehand sketches to clean wireframes, style mirroring, SVG/PDF/PNG export. Rust, wgpu, Wayland.",
+      "showFrom": "2026-10-25T16:33:00+01:00",
+      "media": {
+        "poster": "/assets/media/neuralcanvas.webp",
+        "alt": "NeuralCanvas: a sketched layout on the canvas, projects in the sidebar, tools on the left"
+      }
+    },
+    {
       "id": "vectorstudio",
       "name": "VectorStudio",
       "slug": "no-vector-days",
